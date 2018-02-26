@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>Sexcapade</title>
+		<link type="text/css" rel="stylesheet" href="style.css">
+		<link rel="icon" href="../favicon.png">
+	</head>
+	<body>
+		<div id="mainContainer">
+			<div id="mainBanner">
+				<img id="sitebanner" src="../banner.png" alt="sexcapade banner">
+			</div>
+
+			<!--navigation bar-->
+			<div class="navigationBar">
+				<a href="../loggedIn/index.html">Main Page</a>
+				<a href="../profile/index.html">My Profile</a>
+				<div class="dropdown">
+					<button class="dropdownButton" onclick="onDropdownClick()">Sexcapades</button>
+					<div class="dropdown-content" id="sexcapadeOptions">
+						<a href="../mySexcapades/index.html">My Sexcapades</a>
+						<a href="../myRequests/index.html">Secapade Requests</a>
+						<a href="../findPartner/index.html">Find Sexcapade Partner</a>
+					</div>
+				</div>
+				<a href="../wallOfFordliness/index.html">Wall of Fordliness</a>
+				<a href="../wallOfShame/index.html">Wall of Shame</a>
+				<a href="../index.html">Log Out</a>
+			</div>
+
+			<div id="contentSection">
+				<table id="sexcapadeTable">
+					<tr>
+						<td align="center" colspan="2">
+							<img src="requestHeader.png">
+							<br><br>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<table id="sexcapadeForm">
+								<tr>
+									<td>
+										<label class="label">Location:</label>
+									</td>
+									<td>
+										<select id="selectLocation">
+											<option value="The Feelies">The Feelies</option>
+											<option value="Westminster Abbey">Westminster Abbey</option>
+											<option value="Obstacle Golf">Obstacle Golf</option>
+											<option value="The Savage Reservation">The Savage Reservation</option>
+											<option value="Shopping">Shopping</option>
+										</select>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<label class="label">Date:</label>
+									</td>
+									<td>
+										<select id="selectDate">
+											<option value="">Jul 17</option>
+											<option value="">Jul 19</option>
+											<option value="">Jul 20</option>
+											<option value="">Jul 25</option>
+											<option value="">Jul 27</option>
+											<option value="">Jul 29</option>
+											<option value="">Jul 30</option>
+											<option value="">Jul 31</option>
+										</select>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<label class="label">Time:</label>
+									</td>
+									<td>
+										<select id="selectTime">
+											<option value="">5:00 pm</option>
+											<option value="">6:00 pm</option>
+											<option value="">7:00 pm</option>
+											<option value="">8:00 pm</option>
+											<option value="">9:00 pm</option>
+											<option value="">10:00 pm</option>
+											<option value="">11:00 pm</option>
+										</select>
+									</td>
+								</tr>
+								<tr>
+									<td align="center">
+										<br><br>
+										<button id="sendButton" onclick="onSexcapadeRequest()">Send Request</label>
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+
+		<script>
+			window.onload = function () {
+				document.getElementById("defaultOpen").click();
+			}
+
+			/* When the user clicks on the button, 
+			toggle between hiding and showing the dropdown content */
+			function onDropdownClick() {
+				document.getElementById("sexcapadeOptions").classList.toggle("show");
+			}
+
+			// Close the dropdown if the user clicks outside of it
+			window.onclick = function(event) {
+				if (!event.target.matches('.dropdownButton')) {
+					var dropdown = document.getElementById("sexcapadeOptions");
+					if (dropdown.classList.contains('show')) {
+						dropdown.classList.remove('show');
+					}
+				}
+			}
+
+			function onSexcapadeRequest() {
+				window.location='../findPartner/index.html';
+			}
+		</script>
+	</body>
+</html>

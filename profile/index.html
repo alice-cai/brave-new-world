@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>Sexcapade</title>
+		<link type="text/css" rel="stylesheet" href="style.css">
+		<link rel="icon" href="../favicon.png">
+	</head>
+	<body>
+		<div id="mainContainer">
+			<div id="mainBanner">
+				<img id="sitebanner" src="../banner.png" alt="sexcapade banner">
+			</div>
+
+			<!--navigation bar-->
+			<div class="navigationBar">
+				<a href="../loggedIn/index.html">Main Page</a>
+				<a href="index.html">My Profile</a>
+				<div class="dropdown">
+					<button class="dropdownButton" onclick="onDropdownClick()">Sexcapades</button>
+					<div class="dropdown-content" id="sexcapadeOptions">
+						<a href="../mySexcapades/index.html">My Sexcapades</a>
+						<a href="../myRequests/index.html">Secapade Requests</a>
+						<a href="../findPartner/index.html">Find Sexcapade Partner</a>
+					</div>
+				</div>
+				<a href="../wallOfFordliness/index.html">Wall of Fordliness</a>
+				<a href="../wallOfShame/index.html">Wall of Shame</a>
+				<a href="../index.html">Log Out</a>
+			</div>
+
+			<div id="contentSection">
+				<table id="imageTable">
+					<tr>
+						<td align="center">
+							<img id="profileHeader" src="profile header.png" alt="profile header">
+						</td>
+					</tr>
+
+
+					<tr>
+						<td align="center">
+							<img id="profileBody" src="profile body.png" alt="profile body">
+						</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+
+		<script>
+			/* When the user clicks on the button, 
+			toggle between hiding and showing the dropdown content */
+			function onDropdownClick() {
+				document.getElementById("sexcapadeOptions").classList.toggle("show");
+			}
+
+			window.onload = function () {
+				document.getElementById("defaultOpen").click();
+			}
+
+			// Close the dropdown if the user clicks outside of it
+			window.onclick = function(event) {
+				if (!event.target.matches('.dropdownButton')) {
+					var dropdown = document.getElementById("sexcapadeOptions");
+					if (dropdown.classList.contains('show')) {
+						dropdown.classList.remove('show');
+					}
+				}
+			}
+		</script>
+	</body>
+</html>

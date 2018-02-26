@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>Wall of Fordliness</title>
+		<link type="text/css" rel="stylesheet" href="style.css">
+		<link rel="icon" href="../favicon.png">
+	</head>
+	<body>
+		<div id="mainContainer">
+			<div id="mainBanner">
+				<img id="sitebanner" src="../banner.png" alt="sexcapade banner">
+			</div>
+
+			<!--navigation bar-->
+			<div class="navigationBar">
+				<a href="../index.html">Main Page</a>
+				<a href="../wallOfFordliness/index.html">Wall of Fordliness</a>
+				<a href="index.html">Wall of Shame</a>
+			</div>
+
+			<div id="contentSection">
+				<img id="header" src="header.png" alt="Fordliness List">
+				<table id="hallOfFame">
+					<tr>
+						<td><img class="firstCol" src="bernard8.png" alt="The D.H.C. - 34 sex partners (Jun A.F. 632)"></td>
+						<td><img class="secondCol" src="helmholtz.png" alt="Joanna Diesel - 29 sex partners (May A.F. 632)"></td>
+					</tr>
+					<tr>
+						<td><img class="firstCol" src="bernard6.png" alt="Fanny Crowne - 28 sex partners (Apr A.F. 632)"></td>
+						<td><img class="secondCol" src="bernard5.png" alt="Henry Foster - 32 sex partners (Mar A.F. 632)"></td>
+					</tr>
+					<tr>
+						<td><img class="firstCol" src="bernard4.png" alt="Fifi Bradlaugh - 27 sex partners (Feb A.F. 632)"></td>
+						<td><img class="secondCol" src="bernard3.png" alt="Helmholtz Watson - 42 sex partners (Jan A.F. 632)"></td>
+					</tr>
+					<tr>
+						<td><img class="firstCol" src="bernard2.png" alt="Helmholtz Watson - 35 sex partners (Dec A.F. 631)"></td>
+						<td><img class="secondCol" src="bernard1.png" alt="Lenina Crowne - 32 sex partners (Nov A.F. 631)"></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</body>
+
+		<script>
+			/* When the user clicks on the button, 
+			toggle between hiding and showing the dropdown content */
+			function onDropdownClick() {
+				document.getElementById("sexcapadeOptions").classList.toggle("show");
+			}
+
+			window.onload = function () {
+				document.getElementById("defaultOpen").click();
+			}
+
+			// Close the dropdown if the user clicks outside of it
+			window.onclick = function(event) {
+				if (!event.target.matches('.dropdownButton')) {
+					var dropdown = document.getElementById("sexcapadeOptions");
+					if (dropdown.classList.contains('show')) {
+						dropdown.classList.remove('show');
+					}
+				}
+			}
+		</script>
+</html>

@@ -1,0 +1,283 @@
+html, body {
+	font-family: "Trebuchet MS";
+	color: #434343;
+	margin: 0;
+	background: #e4e4e4;
+}
+
+button {
+	font-family: "Trebuchet MS";
+	font-style: bold;
+	text-align: center;
+	color: white;
+	border: none;
+	font-size: 1.2em;
+   	height: 2em;
+	width: 8em;
+	border-radius: 0.2em;
+}
+
+button:hover {
+	background-color: #ff9933;
+}
+
+#mainContainer {
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 2em;
+	margin-bottom: 5em;
+	width: 1140px;
+}
+
+#mainBanner {
+	height: 168px;
+	width: 1140px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+#contentSection {
+	font-style: bold;
+	font-size: 2em;
+	background: white;
+	text-align: center;
+	margin-top: 0em;
+	margin-bottom: 0em;
+	margin-left: 0;
+	margin-right: 0;
+	height: 91em;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #434343;
+}
+
+#imageTable {
+	margin-left: auto;
+	margin-right: auto;
+	width: 1000px;
+}
+
+
+/*---------- NAVIGATION BAR ----------*/
+.navigationBar {
+	overflow: hidden;
+	background-color: #434343;
+	font-family: "Trebuchet MS";
+	margin-left: 0;
+	margin-right: 0;
+	margin-top: 1.5em;
+	margin-bottom: 0;
+	height: 3.3em;
+}
+
+.navigationBar a {
+	float: left;
+	font-size: 1.3em;
+	color: white;
+	text-align: center;
+	padding: 0.75em 1.9em;
+	text-decoration: none;
+}
+
+.navigationBar a:hover {
+	background-color: #6d6d6d;
+}
+
+
+/*---------- LOGIN AND REGISTRATION TABS ----------*/
+.tab {
+	overflow: hidden;
+	background-color: white;
+}
+
+#loginAndSignUpTabs {
+	margin-top: 2em;
+}
+
+.tab button {
+	background-color: #595959;
+	float: left;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	padding: 0.7em 0.7em;
+	transition: 0.3s;
+	height: 2.8em;
+	width: 6.5em;
+	font-size: 0.9em;
+	font-style: bold;
+	border-radius: 0;
+	margin-right: 0.3em;
+}
+
+.tab button:hover {
+	background-color: #a4144f;
+}
+
+.tab button.active {
+	background-color: #a4144f;
+}
+
+.tabcontent {
+	display: none;
+	padding: 1.5em 3.5em;
+	border: 0.1em solid #a4144f;
+	height: 16.5em;
+	text-align: left;
+}
+
+
+/*---------- REGISTRATION SECTION ----------*/
+.signUpLabel {
+	font-family: "Trebuchet MS";
+	font-style: bold;
+	font-size: 0.8em;
+}
+
+.labelCell {
+	height: 2.1em;
+	width: 10.5em;
+}
+
+.casteButton {
+	font-size: 0.8em;
+	height: 2em;
+	width: 6em;
+	display: inline-block;
+}
+
+#alphaButton {
+	background-color: #434343;
+	margin-right: 0.8em;
+}
+
+#alphaButton:hover {
+	background-color: #555555;
+}
+
+#betaButton {
+	background-color: #a4144f;
+}
+
+#betaButton:hover {
+	background-color: #c4185e;
+}
+
+select {
+	font-size: 0.8em;
+	height: 1.5em;
+	width: 8em;
+}
+
+textarea {
+	height: 1.1em;
+	width: 10em;
+	font-family: "Trebuchet MS";
+	font-size: 0.8em;
+}
+
+#createAccountButton {
+	margin-left: 35%;
+	margin-right: 35%;
+	margin-top: 0.8em;
+	background-color: #434343;
+	font-size: 0.8em;
+	height: 2.5em;
+	width: 9em;
+}
+
+#createAccountButton:hover {
+	background-color: #555555;
+}
+
+
+/*---------- LOGIN SECTION ----------*/
+#logInTable {
+	margin: auto;
+	margin-top: 2em;
+	width: 40%;
+}
+
+.logInLabel {
+	font-size: 1em;
+}
+
+.logInTextField {
+	font-size: 1em;
+	height: 1.2em;
+}
+
+#logInButton {
+	background-color: #434343;
+	font-size: 1em;
+	height: 2em;
+	width: 6em;
+}
+
+
+/*---------- LEADERBOARD SECTION ----------*/
+#leaderboardTable {
+	margin-top: 2.5em;
+}
+
+#leaderboardHeader {
+	margin-bottom: 0.3em;
+}
+
+#leaderboard {
+	margin-left: 0.85em;
+}
+
+
+/*---------- WALL OF FORDLINESS SECTION ----------*/
+#fordButtonSection {
+	margin-top: 2.5em;
+	height: 400px;
+	width: 1000px;
+	display: inline-block;
+}
+
+#fordListButton {
+	height: 2.1em;
+	width: 14em;
+	font-size: 1em;
+	background-color: #2b2b2b;
+	position: relative;
+	bottom: 25%;
+	left: 17%;
+	color: #F0F0F0;
+	border-radius: 0.2em;
+}
+
+#fordListButton:hover {
+	background-color: #383838;
+}
+
+
+/*---------- WALL OF SHAME SECTION ----------*/
+#blacklistButtonSection {
+	font-style: bold;
+	font-size: 2em;
+	display: inline-block;
+	margin-top: 0.5em;
+	height: 400px;
+	width: 1000px;
+}
+
+#blacklistButton {
+	height: 1.8em;
+	font-style: bold;
+	width: 12em;
+	font-size: 0.5em;
+	background-color: white;
+	position: relative;
+	bottom: 33%;
+	color: black;
+	border-radius: 0.2em;
+}
+
+#blacklistButton:hover {
+	background-color: #E8E8E8;
+}

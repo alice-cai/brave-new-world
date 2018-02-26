@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>Sexcapade</title>
+		<link type="text/css" rel="stylesheet" href="style.css">
+		<link rel="icon" href="../favicon.png">
+	</head>
+	<body>
+		<div id="mainContainer">
+			<div id="mainBanner">
+				<img id="sitebanner" src="../banner.png" alt="sexcapade banner">
+			</div>
+
+			<!--navigation bar-->
+			<div class="navigationBar">
+				<a href="../loggedIn/index.html">Main Page</a>
+				<a href="../profile/index.html">My Profile</a>
+				<div class="dropdown">
+					<button class="dropdownButton" onclick="onDropdownClick()">Sexcapades</button>
+					<div class="dropdown-content" id="sexcapadeOptions">
+						<a href="../mySexcapades/index.html">My Sexcapades</a>
+						<a href="../myRequests/index.html">Secapade Requests</a>
+						<a href="index.html">Find Sexcapade Partner</a>
+					</div>
+				</div>
+				<a href="../wallOfFordliness/index.html">Wall of Fordliness</a>
+				<a href="../wallOfShame/index.html">Wall of Shame</a>
+				<a href="../index.html">Log Out</a>
+			</div>
+
+			<div id="contentSection">
+				<table id="imageTable">
+					<tr>
+						<td align="left" valign="middle">
+							<textarea placeholder="Enter keywords" id="searchBar" rows="1" cols="20"></textarea>
+							<br><br><br>
+						</td>
+						<td align="right" valign="top">
+							<button id="searchButton">Search</button>
+						</td>
+					</tr>
+					<tr>
+						<td align="left" valign="top">
+							<img src="bernard.png">
+						</td>
+						<td align="right" valign="top">
+							<button class="alphaButton">Request</button>
+						</td>
+					</tr>
+					<tr>
+						<td align="left" valign="top">
+							<img src="henry.png">
+						</td>
+						<td align="right" valign="top">
+							<button disabled class="disabledButton">Request</button>
+						</td>
+					</tr>
+					<tr>
+						<td align="left" valign="top">
+							<img src="Helmholtz.png">
+						</td>
+						<td align="right" valign="top">
+							<button onclick="requestHelmholtz()" class="alphaButton">Request</button>
+						</td>
+					</tr>
+					<tr>
+						<td align="left" valign="top">
+							<img src="dhc.png">
+						</td>
+						<td align="right" valign="top">
+							<button class="alphaButton">Request</button>
+						</td>
+					</tr>
+					<tr>
+						<td align="left" valign="top">
+							<img src="fanny.png">
+						</td>
+						<td align="right" valign="top">
+							<button class="betaButton">Request</button>
+						</td>
+					</tr>
+					<tr>
+						<td align="left" valign="top">
+							<img src="fifi.png">
+						</td>
+						<td align="right" valign="top">
+							<button class="betaButton">Request</button>
+						</td>
+					</tr>
+					<tr>
+						<td align="left" valign="top">
+							<img src="joanna.png">
+						</td>
+						<td align="right" valign="top">
+							<button class="betaButton">Request</button>
+						</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+
+		<script>
+			/* When the user clicks on the button, 
+			toggle between hiding and showing the dropdown content */
+			function onDropdownClick() {
+				document.getElementById("sexcapadeOptions").classList.toggle("show");
+			}
+
+			window.onload = function () {
+				document.getElementById("defaultOpen").click();
+			}
+
+			// Close the dropdown if the user clicks outside of it
+			window.onclick = function(event) {
+				if (!event.target.matches('.dropdownButton')) {
+					var dropdown = document.getElementById("sexcapadeOptions");
+					if (dropdown.classList.contains('show')) {
+						dropdown.classList.remove('show');
+					}
+				}
+			}
+
+			function requestHelmholtz() {
+				window.location='../requestSexcapade/index.html';
+			}
+		</script>
+	</body>
+</html>

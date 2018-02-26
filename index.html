@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>Sexcapade</title>
+		<link type="text/css" rel="stylesheet" href="style.css">
+		<link rel="icon" href="favicon.png">
+	</head>
+	<body>
+		<div id="mainContainer">
+			<div id="mainBanner">
+				<img id="sitebanner" src="banner.png" alt="sexcapade banner">
+			</div>
+
+			<!--navigation bar-->
+			<div class="navigationBar">
+				<a href="index.html">Main Page</a>
+				<a href="wallOfFordliness/index.html">Wall of Fordliness</a>
+				<a href="wallOfShame/index.html">Wall of Shame</a>
+			</div>
+
+			<div id="contentSection">
+				<table id="imageTable">
+					<tr>
+						<td>
+							<!-- Tab links -->
+							<div class="tab" id="loginAndSignUpTabs">
+								<button class="tablinks" onclick="switchTab(event, 'SignUp')" id="defaultOpen">Sign Up</button>
+								<button class="tablinks" onclick="switchTab(event, 'LogIn')">Log In</button>
+							</div>
+
+							<!-- Tab content -->
+							<div id="SignUp" class="tabcontent">
+								<table id="signUpTable">
+
+									<!--choose caste-->
+									<tr>
+										<td class="labelCell">
+											<label class="signUpLabel">Caste:</label>
+										</td>
+										<td>
+											<button class="casteButton" id="alphaButton">Alpha</button>
+											<button class="casteButton" id="betaButton">Beta</button>
+										</td>
+									</tr>
+
+									<!--choose first name-->
+									<tr>
+										<td class="labelCell">
+											<label class="signUpLabel">First Name: </label>
+										</td>
+										<td>
+											<select id = "selectFirstName">
+												<option value="Benito">Benito</option>
+												<option value="Bernard">Bernard</option>
+												<option value="Clara">Clara</option>
+												<option value="Fanny">Fanny</option>
+												<option value="Fifi">Fifi</option>
+												<option value="Helmholtz">Helmholtz</option>
+												<option value="Henry">Henry</option>
+												<option value="Joanna">Joanna</option>
+												<option value="Lenina">Lenina</option>
+												<option value="Morgana">Morgana</option>
+												<option value="Sarojini">Sarojini</option>
+												<option value="Thomas">Thomas</option>
+												<option value="Tom">Tom</option>
+											</select>
+										</td>
+									</tr>
+
+									<!--choose last name-->
+									<tr>
+										<td class="labelCell">
+											<label class="signUpLabel">Last Name: </label>
+										</td>
+										<td>
+											<select id = "selectLastName">
+												<option value="Bradlaugh">Bradlaugh</option>
+												<option value="Crowne">Crowne</option>
+												<option value="Deterding">Deterding</option>
+												<option value="Diesel">Diesel</option>
+												<option value="Engels">Engels</option>
+												<option value="Foster">Foster</option>
+												<option value="Hoover">Hoover</option>
+												<option value="Kawaguchi">Kawaguchi</option>
+												<option value="Marx">Marx</option>
+												<option value="Rothschild">Rothschild</option>
+												<option value="Watson">Watson</option>
+											</select>
+										</td>
+									</tr>
+
+									<!--choose username-->
+									<tr>
+										<td class="labelCell">
+											<label class="signUpLabel">Username:</label>
+										</td>
+										<td>
+											<textarea rows="1" cols="20"></textarea>
+										</td>
+									</tr>
+
+									<!--choose password-->
+									<tr>
+										<td class="labelCell">
+											<label class="signUpLabel">Password:</label>
+										</td>
+										<td>
+											<textarea rows="1" cols="20"></textarea>
+										</td>
+									</tr>
+
+									<!--confirm password-->
+									<tr>
+										<td class="labelCell">
+											<label class="signUpLabel">Confirm Password:</label>
+										</td>
+										<td>
+											<textarea rows="1" cols="20"></textarea>
+										</td>
+									</tr>
+								</table>
+								<button id="createAccountButton">Create Account</button>
+							</div>
+
+							<div id="LogIn" class="tabcontent">
+								<table id="logInTable">
+									<tr>
+										<td>
+											<label class="logInLabel">Username:</label>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<textarea rows="1" cols="20" class="logInTextField"></textarea>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<br><br>
+											<label class="logInLabel">Password:</label>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<textarea rows="1" cols="20" class="logInTextField"></textarea>
+										</td>
+									</tr>
+									<tr>
+										<td align="center">
+											<br><br>
+											<button id="logInButton" onclick="onLoginRequest()">Log In</label>
+										</td>
+									</tr>
+								</table>
+							</div>
+						</td>
+					</tr>
+
+
+					<tr>
+						<td align="center">
+							<!--contains sexcapade graphic + login and registration buttons-->
+							<table id="leaderboardTable">
+								<tr>
+									<td colspan="2">
+										<img id="leaderboardHeader" src="leaderboard header.png" alt="most sexcapades">
+									</td>
+								</tr>
+								<tr>
+									<td><img id="leaderboardFirst" src="first on leaderboard.png" alt="most sexcapades"></td>
+									<td><img id ="leaderboard" src="leaderboard.png" alt="most sexcapades"></td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+					<tr>
+						<td align="center">
+							<!--contains ford graphic + button that links to Fordliness List-->
+							<div id="fordButtonSection">
+								<img src="ford button graphic.png" alt="ford button graphic">
+								<button id="fordListButton" onclick="showFordList()">VIEW WALL OF FORDLINESS</button>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td align="center">
+							<!--contains Blacklist graphic and button that links to Blacklist-->
+							<div id="blacklistButtonSection">
+								<img src="blacklist button graphic.png" alt="blacklist button graphic">
+								<button id="blacklistButton" onclick="showShameList()">VIEW WALL OF SHAME</button>
+							</div>
+						</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+
+		<script>
+			/* When the user clicks on the button, 
+			toggle between hiding and showing the dropdown content */
+			function onDropdownClick() {
+				document.getElementById("sexcapadeOptions").classList.toggle("show");
+			}
+
+			window.onload = function () {
+				document.getElementById("defaultOpen").click();
+			}
+
+			// Close the dropdown if the user clicks outside of it
+			window.onclick = function(event) {
+				if (!event.target.matches('.dropdownButton')) {
+					var dropdown = document.getElementById("sexcapadeOptions");
+					if (dropdown.classList.contains('show')) {
+						dropdown.classList.remove('show');
+					}
+				}
+			}
+
+			function onLoginRequest() {
+				window.location='loggedIn/index.html';
+			}
+
+			function showFordList() {
+				window.location='wallOfFordliness/index.html';
+			}
+
+			function showShameList() {
+				window.location='wallOfShame/index.html';
+			}
+
+			function switchTab(event, newTab) {
+				// Declare all variables
+				var i, tabcontent, tablinks;
+
+				// Get all elements with class="tabcontent" and hide them
+				tabcontent = document.getElementsByClassName("tabcontent");
+				for (i = 0; i < tabcontent.length; i++) {
+					tabcontent[i].style.display = "none";
+				}
+
+				// Get all elements with class="tablinks" and remove the class "active"
+				tablinks = document.getElementsByClassName("tablinks");
+				for (i = 0; i < tablinks.length; i++) {
+					tablinks[i].className = tablinks[i].className.replace(" active", "");
+				}
+
+				// Show the current tab, and add an "active" class to the button that opened the tab
+				document.getElementById(newTab).style.display = "block";
+				event.currentTarget.className += " active";
+			}
+		</script>
+	</body>
+</html>
